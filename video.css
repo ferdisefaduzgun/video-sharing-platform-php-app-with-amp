@@ -1,0 +1,172 @@
+.recent-video-bar {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+}
+
+.recent-video-bar h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.recent-video-container {
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+}
+
+.recent-video-item {
+    background-color: #ffffff;
+    border-radius: 1px;
+    overflow: hidden;
+    text-align: center;
+    width: 100%; /* Her video eşit genişlikte */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.recent-video-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.recent-video-thumbnail {
+    width: 100%;
+    height: 124px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+}
+
+.recent-video-title {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 10px 0;
+    color: #333;
+}
+
+.recent-video-meta {
+    font-size: 12px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.recent-video-date,
+.recent-video-duration {
+    display: block;
+    margin-top: 5px;
+}
+
+.recent-video-thumbnail-container {
+    position: relative; /* Bu div'in içindeki öğelerin konumunu kontrol edebilmek için relative kullanıyoruz */
+}
+
+.recent-video-logo {
+    position: absolute; /* Konumunu özgürce belirleyebilmek için absolute kullanıyoruz */
+    top: 0; /* Thumbnail'in üst kenarından 10px aşağı */
+    right: 0; /* Thumbnail'in sağ kenarından 10px içeride */
+    width: 55px; /* Logo boyutunu belirtiyoruz */
+    height: 15px; /* En-boy oranını korumak için aynı değeri veriyoruz */
+    background-color: rgba(255, 255, 255, 0.8); /* Arka planı hafif saydam yapıyoruz */
+    display: flex; /* Logo resmini ortalamak için */
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Taşan kısmı gizlemek için */
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2); /* Hafif gölge efekti */
+}
+
+.recent-video-logo img {
+    width: 95%; /* Logo resminin içindeki orana göre boyutlandırılması */
+    height: auto; /* Oranı koruyoruz */
+    object-fit: contain; /* Resmin bozulmadan görünmesi için */
+}
+
+
+@media (max-width: 480px){
+    .recent-video-container {
+        display: flex;
+        gap: 10px;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+
+}}
+
+
+@media (max-width: 425px){
+.recent-video-item{
+    width: 90%;
+}}
+
+
+@media (max-width: 380px){
+    .recent-video-item{
+        width: 80%;
+    }}
+
+
+    #skip-ad-btn {
+    width: 200px;
+    background-color: #bbc5d1;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight:bold;
+}
+
+
+
+.custom-tags {
+list-style-type: none;
+padding: 15px 0 0 10px;
+margin: 0;
+display: flex;
+flex-wrap: wrap;
+}
+
+/* Her bir etiket için stil */
+.custom-tag {
+margin-right: 15px;
+margin-bottom: 10px;
+}
+
+/* Linklerin stilini düzenle */
+.custom-tag-link {
+text-decoration: none;
+color: #8c0615; /* Yazı rengi */
+font-weight: bold;
+display: flex;
+align-items: center;
+}
+
+/* İkon stilini ayarlama */
+.custom-tag-link i {
+margin-right: 5px; /* İkon ile metin arasına boşluk ekler */
+}
+
+/* Hover efekti */
+.custom-tag-link:hover {
+text-decoration: underline;
+color: #a30d1c; /* Hoverda renk değişimi */
+}
+
+#video-player {
+    position: relative;
+}
+
+#logo-overlay {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10;  /* Logo'nun video üzerindeki önceliğini belirler */
+}
+
+#video-logo {
+    width: 100px;  /* Logonun genişliğini ayarlayabilirsiniz */
+    height: auto;  /* Oran korunarak yükseklik ayarlanır */
+}

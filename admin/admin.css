@@ -1,0 +1,201 @@
+/* Genel stiller */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+body {
+    background-color: #82a9db;
+    font-size: 13px;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 5px 30px;
+}
+
+/* Başlık */
+.page-title {
+    text-align: center;
+    font-size: 25px;
+    color: #333;
+}
+
+/* Form düzeni */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+/* Form alanları */
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 15px;
+    color: #444;
+}
+
+input, select {
+    padding: 5px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input:focus, select:focus {
+    border-color: #007bff;
+}
+
+/* Submit button */
+.submit-btn {
+    padding: 12px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #218838;
+}
+
+/* Videolar Tablosu */
+.video-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.video-table th, .video-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.video-table th {
+    background-color: #007bff;
+    color: white;
+}
+
+.video-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.video-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Etiketler */
+.tag {
+    background-color: #007bff;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 5px;
+    margin-right: 8px;
+    font-size: 14px;
+}
+
+/* Silme butonu */
+.delete-btn {
+    text-decoration: none;
+    color: #ff4d4d;
+    padding: 6px 12px;
+    border: 1px solid #ff4d4d;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.delete-btn:hover {
+    background-color: #ff4d4d;
+    color: white;
+}
+
+/* Küçük ekranlar için düzenleme */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 20px;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .page-title {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .form-group input,
+    .form-group select {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .submit-btn {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .video-table {
+        font-size: 14px;
+        margin-top: 20px;
+    }
+
+    .video-table th, .video-table td {
+        padding: 10px;
+    }
+
+    .tag {
+        font-size: 12px;
+        padding: 3px 6px;
+    }
+}
+
+
+#hakkinda{
+    height: 250px;
+
+}
+
+
+textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s;
+    resize: vertical; /* Kullanıcıya dikeyde boyutlandırma imkanı verir */
+    min-height: 100px; /* Minimum yükseklik */
+    overflow: auto; /* Taşan metin için kaydırma çubuğu */
+}
+
+/* Input kutusunun odaklandığında rengini değiştir */
+textarea:focus {
+    border-color: #0056b3;
+}
+
+/* Placeholder yazısının stilini değiştirebiliriz */
+textarea::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
